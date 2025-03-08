@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - StyleStore</title>
+    <!-- Include the same stylesheet as in the main file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Style<span>Store</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="categories.html" class="active">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cart-icon">
+                <span>🛒</span>
+                <div class="cart-count" id="cart-count">0</div>
+            </div>
+            <div class="mobile-menu" id="mobile-menu">☰</div>
+        </div>
+    </header>
+
+    <!-- Categories Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Shop by Categories</h1>
+            <p>Find exactly what you're looking for by browsing our collection categories</p>
+        </div>
+    </section>
+
+    <!-- Main Categories Section -->
+    <section class="categories-container container">
+        <div class="section-header">
+            <h2>Browse Categories</h2>
+            <p>Explore our wide range of product categories</p>
+        </div>
+        
+        <div class="category-grid" id="category-grid">
+            <!-- Categories will be dynamically added here -->
+        </div>
+        
+        <!-- Popular Categories Tabs -->
+        <div class="popular-categories">
+            <div class="section-header">
+                <h2>Popular Categories</h2>
+                <p>Discover our most popular items by category</p>
+            </div>
+            
+            <div class="category-tabs">
+                <div class="category-tab active" id="tab-1" data-id="1">Clothing</div>
+                <div class="category-tab" id="tab-2" data-id="2">Shoes</div>
+                <div class="category-tab" id="tab-3" data-id="3">Accessories</div>
+            </div>
+            
+            <div class="category-content active" id="content-1">
+                <div class="products-grid" id="category-products-1">
+                    <!-- Clothing products will be added here -->
+                </div>
+            </div>
+            
+            <div class="category-content" id="content-2">
+                <div class="products-grid" id="category-products-2">
+                    <!-- Shoes products will be added here -->
+                </div>
+            </div>
+            
+            <div class="category-content" id="content-3">
+                <div class="products-grid" id="category-products-3">
+                    <!-- Accessories products will be added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the modals and footer from the main file -->
+    <!-- Cart Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-cart">&times;</span>
+            <div class="modal-header">
+                <h3>Your Shopping Cart</h3>
+            </div>
+            <div id="cart-contents">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-checkout">&times;</span>
+            <div class="modal-header">
+                <h3>Checkout</h3>
+            </div>
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code</label>
+                        <input type="text" id="zip" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="XXX" required>
+                    </div>
+                </div>
+                <button type="submit" class="checkout-btn">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <div class="success-message">
+                <span>✅</span>
+                <h3>Order Successful!</h3>
+                <p>Your order has been placed successfully. Thank you for shopping with us!</p>
+                <button class="btn btn-primary" id="continue-shopping">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>StyleStore</h3>
+                <p>Your one-stop destination for trendy fashion and accessories at affordable prices.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul class="footer-links">
+                    <li><a href="shop.html">New Arrivals</a></li>
+                    <li><a href="shop.html">Best Sellers</a></li>
+                    <li><a href="shop.html">Sale</a></li>
+                    <li><a href="categories.html">Clothing</a></li>
+                    <li><a href="categories.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 StyleStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include the main JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
